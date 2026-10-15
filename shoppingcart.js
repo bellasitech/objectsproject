@@ -14,4 +14,15 @@ const characters = [
     { name: "Rogue", media: "X-men", species: "Mutant", gender: "Girl", pronouns: "She/her", age: "Adult", isOC: false },
     { name: "Forest", media: "Astrolina", species: "Human", gender: "Guy", pronouns: "He/him", age: "Adult", isOC: true },
     { name: "Kasane Teto", media: "Vocal Synth", species: "Chimera", gender: "Girl", pronouns: "She/they", age: "Adult", isOC: false },
+    { name: "Prototype", media: "Regretevator", species: "Robot", gender: "Non-binary", pronouns: "He/they", age: "Young adult", isOC: false },
+    { name: "Queen", media: "Deltarune", species: "Robot", gender: "Girl", pronouns: "She/her", age: "Adult", isOC: false },
+    { name: "Alice", media: "Astrolina", species: "Human", gender: "Girl", pronouns: "She/her", age: "Adult", isOC: true },
+    { name: "Infected", media: "Regretevator", species: "Human", gender: "Guy", pronouns: "He/any", age: "Young adult", isOC: false },
+    { name: "Kagamine Rin", media: "Vocal Synth", species: "Human", gender: "Girl", pronouns: "She/her", age: "Young adult", isOC: false },
 ]
+
+const CertainMedia = characters.filter(function(mediaa){
+    return characters.media === mediaa;
+});
+
+co
