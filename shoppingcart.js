@@ -25,10 +25,30 @@ function FiltersMedia(characters, search) {
   const filterCharacter = characters.filter((character)=> character.media === search);
   return filterCharacter; 
 }
-
+function FiltersSpecies(characters, search) {
+  const filterCharacter = characters.filter((character)=> character.species === search);
+  return filterCharacter; 
+}
 function FiltersGender(characters, search) {
   const filterCharacter = characters.filter((character)=> character.gender === search);
   return filterCharacter; 
 }
+function FiltersAge(characters, search) {
+  const filterCharacter = characters.filter((character)=> character.age === search);
+  return filterCharacter; 
+}
+function isOC(characters, search) {
+  const filterCharacter = characters.filter((character)=> character.isOC === search);
+  return filterCharacter; 
+}
 
 console.log(FiltersMedia(characters, "X-men"));
+
+
+const cart = [];
+
+function AddCart (item) {
+  cart.push(item);
+  return cart;
+}
+console.log(AddCart("Melanie"))
