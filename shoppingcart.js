@@ -63,11 +63,8 @@ function RemoveCart (item) {
 }
 console.log(RemoveCart("Kris"))
 
-function TotalCost () {
-  let total = 0;
-  cart.cost.forEach((cost) => {
-    total += cost;
-  });
-return total;
-}
-console.log(TotalCost)
+let total = 0;
+cart.values.forEach((cost) => {
+  total += cost;
+});
+console.log(total);
