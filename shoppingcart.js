@@ -45,26 +45,31 @@ function isOC(characters, search) {
 /* console.log(FiltersMedia(characters, "X-men"));
  */
 
-const cart = [];
+const cart = [{}];
 
-function AddCart (item) {
+function AddCart (characters,item) {
   const findCharacter = characters.find((character) => character.name === item)
   cart.push(findCharacter);
   return((item) + " added to cart");
-  
 }
-console.log(AddCart("Melanie"))
-console.log(AddCart("Kris"))
+console.log(AddCart(characters, "Melanie"))
+console.log(AddCart(characters,"Kris"))
+
 
 function RemoveCart (item) {
   const findCharacter = characters.find((character) => character.name === item)
   cart.pop(findCharacter);
   return((item) + " removed from cart");
 }
-console.log(RemoveCart("Kris"))
 
-let total = 0;
-cart.values.forEach((cost) => {
-  total += cost;
-});
-console.log(total);
+
+function totalCost (cost) {
+  let total = 0;
+  cart.forEach((value) => {
+    if (typeof value === "number") {
+      total += value;
+    }
+
+  }
+}
+console.log(totalCost(cart.cost));
