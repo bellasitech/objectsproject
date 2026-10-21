@@ -11,14 +11,14 @@ const characters = [
     { name: "Vyren", media: "Astrolina", species: "Alien", gender: "Girl", pronouns: "She/her", age:"Adult", isOC: true, cost: 13 },
     { name: "Gumi Megpoid", media: "Vocal Synth", species: "Human", gender: "Girl", pronouns: "She/her", age:"Adult", isOC: false, cost: 15 },
     { name: "Tenna", media: "Deltarune", species: "Tv Head", gender: "Guy", pronouns: "He/him", age: "Adult", isOC: false, cost: 13 },
-    { name: "Rogue", media: "X-men", species: "Mutant", gender: "Girl", pronouns: "She/her", age: "Adult", isOC: false, cost: 13 },
+    { name: "Rogue", media: "X-men", species: "Mutant", gender: "Girl", pronouns: "She/her", age: "Adult", isOC: false, cost: 11 },
     { name: "Forest", media: "Astrolina", species: "Human", gender: "Guy",  age: "Adult", isOC: true, cost: 13 },
-    { name: "Kasane Teto", media: "Vocal Synth", species: "Chimera", gender: "Girl",  age: "Adult", isOC: false, cost: 13 },
+    { name: "Kasane Teto", media: "Vocal Synth", species: "Chimera", gender: "Girl",  age: "Adult", isOC: false, cost: 14 },
     { name: "Prototype", media: "Regretevator", species: "Robot", gender: "Non-binary", age: "Young adult", isOC: false, cost: 13 },
     { name: "Queen", media: "Deltarune", species: "Robot", gender: "Girl",  age: "Adult", isOC: false, cost: 11 },
     { name: "Alice", media: "Astrolina", species: "Human", gender: "Girl", age: "Adult", isOC: true, cost: 13 },
     { name: "Infected", media: "Regretevator", species: "Human", gender: "Guy", age: "Young adult", isOC: false, cost: 16 },
-    { name: "Kagamine Rin", media: "Vocal Synth", species: "Human", gender: "Girl", age: "Young adult", isOC: false, cost: 13 },
+    { name: "Kagamine Rin", media: "Vocal Synth", species: "Human", gender: "Girl", age: "Young adult", isOC: false, cost: 15 },
 ];
 
 function FiltersMedia(characters, search) {
@@ -62,14 +62,20 @@ function RemoveCart (item) {
   return((item) + " removed from cart");
 }
 
+//Create a list of at least 20 items to sell
+//Filter what products are shown with button clicks (clicks added later!)
+//Allow users to add to a cart
+//Remove Items from cart
+//Provide users a total for their purchase
 
-function totalCost (cost) {
+function sumTotal(cart) {
   let total = 0;
-  cart.forEach((value) => {
-    if (typeof value === "number") {
-      total += value;
+  cart.forEach((item) => {
+    if (item && typeof item.cost === "number") {
+      total += item.cost;
     }
-
-  }
+  });
+  return total;
 }
-console.log(totalCost(cart.cost));
+
+console.log(sumTotal(cart));
