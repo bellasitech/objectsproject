@@ -10,8 +10,14 @@
                     <p>Welcome!</p>
                     <img src="https://i.postimg.cc/yxYNxCTg/wiggle1.gif" alt="clover divider"><img src="https://i.postimg.cc/yxYNxCTg/wiggle1.gif" alt="clover divider"> <img src="https://i.postimg.cc/yxYNxCTg/wiggle1.gif" alt="clover divider">
                 </div>
-              <div id="navigation-box">
-                <p>Navigation</p>
+                <div id="flex">
+                    <div id="navigation-box">
+                        <p>Navigation</p>
+                    </div>
+                    <div id="other-box">
+                        <p>w</p>
+                    </div>
+                </div>
             </div>  
         </div>
     </body>
@@ -55,10 +61,15 @@
             text-align: center;
             padding-bottom: 1px;
         }
+        #flex {
+             display: flex;
+        }
         #navigation-box {
             background-image: url("https://i.postimg.cc/RF7Krmg2/Check01.gif");
-            width:150px;
+            width:2px;
             height:500px;
+            flex: 1;
+            order: 1;
             border-radius: 10px;
             margin: 30px;
             border-color: #96a380;
@@ -66,6 +77,23 @@
             border-width: 1px;
             color: #838f6f;
             padding-left: 50px;
+        }
+        #other-section {
+            height:200px;
+            width: 100px;
+            flex: 1;
+            order: 2;
+            border-radius: 10px;
+            margin: 30px;
+            border-color: #96a380;
+            border-style: dashed;
+            border-width: 1px;
+            color: #838f6f;
+            padding-left: 50px;
+
+        }
+        #box {
+
         }
     </style>
 </html>
